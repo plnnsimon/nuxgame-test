@@ -1,0 +1,51 @@
+@import '../../static/scss/variables/colors';
+
+.todos {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+
+  &__item {
+    padding: 10px;
+    border-radius: 4px;
+    background: white;
+    display: flex;
+    grid-gap: 5px;
+    flex-direction: column;
+
+    &-head {
+      display: flex;
+      width: 100%;
+      align-self: center;
+      justify-content: space-between;
+      grid-gap: 20px;
+    }
+
+    &-completed {
+      font-weight: 500;
+    }
+
+    &-id {
+      padding: 2px 5px;
+      border-radius: 4px;
+      width: fit-content;
+      color: white;
+      background: $secondary-bg-color;
+
+      &_favorite {
+        background: gold;
+        color: $primary-text-color;
+      }
+    }
+
+    &-title {}
+
+    &-action {
+      margin-top: 10px;
+      align-self: flex-end;
+      padding: 10px 20px;
+      width: fit-content;
+      color: white;
+    }
+  }
+}
